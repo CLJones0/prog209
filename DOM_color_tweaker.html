@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>DOM Color Tweaker</title>
+	<style>
+		body {
+			font-family:"Trebuchet MS", Segoe, sans-serif;
+			margin:40px;
+			font-size: 1.2em;
+		}
+		div:first-child {
+			margin-bottom: 20px;
+		}
+		button {
+			padding: 10px;
+		}
+		#box {
+			width: 300px;
+			height: 38px;
+			margin-left: 30px;
+		}
+	
+	</style>
+</head>
+<body>
+	<div>
+		Click the button repeatedly to change the box color:
+	</div>
+	
+	<button id="btn">Click me!</button>
+	<input type= "text" id="box">
+	
+	<script>
+		
+	let btn = document.getElementById("btn");
+	let box = document.getElementById("box");
+	let colorRed = 255;    // initialize the red channel to pure red
+
+	btn.addEventListener("click", clickHandler, false);
+		
+	function clickHandler() {
+		// first color channel (red) gets darker every time button is clicked
+		box.style.backgroundColor = "rgb(" + (colorRed-=10) + ", 0, 0)";
+
+		// ES6 equivalent using template string
+		//box.style.backgroundColor = `rgb( ${colorRed-=10}, 0, 0 )`;	
+	}	
+		
+	</script>
+</body>
+</html>
