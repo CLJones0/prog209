@@ -1,0 +1,12 @@
+#main{
+    font-size: 14pt;
+    font-family: sans-serif;
+}
+.divOne{
+    background-image:linear-gradient(to right, blue,green); 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.divTwo{
+    background-image: linear-gradient(red, orange, yellow);
+    font-family: 'Courier New', Courier, monospace;
+}
